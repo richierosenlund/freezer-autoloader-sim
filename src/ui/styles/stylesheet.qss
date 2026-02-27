@@ -1,0 +1,105 @@
+/* Main Application Stylesheet */
+
+QMainWindow {
+    background-color: #0F172A;
+}
+
+QWidget {
+    background-color: #0F172A;
+    color: #FFFFFF;
+}
+
+QGroupBox {
+    color: #FFFFFF;
+    border: 2px solid #155E75;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px 0 3px;
+}
+
+QLabel {
+    color: #FFFFFF;
+}
+
+QPushButton {
+    background-color: #155E75;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #0369A1;
+}
+
+QPushButton:pressed {
+    background-color: #0C4A6E;
+}
+
+QLineEdit, QSpinBox {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #155E75;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+QComboBox {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #155E75;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    color: #000000;
+    selection-background-color: #155E75;
+}
+
+/* Panel styling */
+#broilerPanel {
+    background-color: #155E75;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#autoloaderPanel {
+    background-color: #155E75;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#beltContainer {
+    background-color: #155E75;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#errorBox {
+    background-color: #7F1D1D;
+    border: 2px solid #EF4444;
+    border-radius: 5px;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+#statusLabel {
+    color: #10B981;
+    font-weight: bold;
+}
+
+#errorLabel {
+    color: #EF4444;
+    font-weight: bold;
+}
