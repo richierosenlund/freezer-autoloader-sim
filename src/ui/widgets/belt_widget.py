@@ -93,13 +93,13 @@ class BeltAnimationWidget(QWidget):
         pixel_position = 30 + (position_percent / 100.0) * BELT_WIDTH
         patty_x = pixel_position - PATTY_WIDTH // 2
         patty_y = belt_y + (BELT_HEIGHT - PATTY_HEIGHT) // 2
-        
-        # Draw patty rectangle
+
+        # Draw patty as a filled ellipse (round patty)
         patty_color = QColor("#8B4513") if patty_type == "W" else QColor("#A0522D")
-        painter.fillRect(int(patty_x), int(patty_y), PATTY_WIDTH, PATTY_HEIGHT, patty_color)
+        painter.setBrush(patty_color)
         painter.setPen(QPen(QColor("#FFFFFF"), 1))
-        painter.drawRect(int(patty_x), int(patty_y), PATTY_WIDTH, PATTY_HEIGHT)
-        
+        painter.drawEllipse(int(patty_x), int(patty_y), PATTY_WIDTH, PATTY_HEIGHT)
+
         # Draw patty label
         painter.setPen(QPen(QColor("#FFFFFF"), 1))
         font = QFont()
@@ -112,6 +112,7 @@ class BeltAnimationWidget(QWidget):
             Qt.AlignCenter,
             patty_type
         )
+        painter.setBrush(Qt.NoBrush)
     
     def draw_time_remaining(self, painter: QPainter):
         """Draw time remaining text"""

@@ -154,7 +154,7 @@ class AutoloaderPanel(QWidget):
         reload_layout.addWidget(reload_w_btn)
         reload_layout.addWidget(reload_wj_btn)
         reload_layout.setContentsMargins(0, 0, 0, 0)
-        reload_group = QGroupBox(f"Reload\nCartridge {cart_id}")
+        reload_group = QGroupBox(f"Reload Cartridge {cart_id}")
         reload_group.setLayout(reload_layout)
         reload_group.setMaximumHeight(80)
         reload_group.setStyleSheet("""
@@ -189,7 +189,7 @@ class AutoloaderPanel(QWidget):
         if cart_id % 2 == 0:
             current_type_label.setText("WJ")
         
-        current_type_group = QGroupBox("Current\nType")
+        current_type_group = QGroupBox("Current Type")
         current_type_layout = QVBoxLayout()
         current_type_layout.addWidget(current_type_label)
         current_type_layout.setContentsMargins(5, 5, 5, 5)
@@ -225,7 +225,7 @@ class AutoloaderPanel(QWidget):
         """)
         queue_label.setAlignment(Qt.AlignCenter)
         
-        queue_group = QGroupBox("Cartridge\nDispense\nqueue")
+        queue_group = QGroupBox("Cartridge Dispense queue")
         queue_layout = QVBoxLayout()
         queue_layout.addWidget(queue_label)
         queue_layout.setContentsMargins(5, 5, 5, 5)
@@ -266,7 +266,7 @@ class AutoloaderPanel(QWidget):
         stack_layout.setContentsMargins(5, 5, 5, 5)
         stack_layout.setSpacing(3)
         
-        stack_group = QGroupBox("Patties\nin stack")
+        stack_group = QGroupBox("Patties in stack")
         stack_group.setLayout(stack_layout)
         stack_group.setMaximumHeight(80)
         stack_group.setStyleSheet("""

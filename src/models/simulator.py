@@ -4,11 +4,19 @@ import time
 from typing import List, Tuple
 from src.models.cartridge import Cartridge
 from src.utils.constants import (
-    CARTRIDGE_CONFIGS, BELT_SPEED_W, BELT_SPEED_WJ
+    CARTRIDGE_CONFIGS,
+    BELT_SPEED_W,
+    BELT_SPEED_WJ,
+    DISPENSE_DELAY_SECONDS_W,
+    DISPENSE_DELAY_SECONDS_WJ,
 )
 
 # mapping from patty type to belt speed constant
 BELT_SPEED_MAP = {"W": BELT_SPEED_W, "WJ": BELT_SPEED_WJ}
+DISPENSE_DELAY_MAP = {
+    "W": DISPENSE_DELAY_SECONDS_W,
+    "WJ": DISPENSE_DELAY_SECONDS_WJ,
+}
 
 
 class PattyBelt:
@@ -75,16 +83,18 @@ class FreezerAutoloaderSimulator:
     def __init__(self):
         """Initialize the simulator"""
         self.cartridges: List[Cartridge] = []
-        # two physical belts; they may run either patty type and speeds adapt
+        # one physical belt per cartridge; belts 1&2 default to W, 3&4 to WJ
         self.belt1 = PattyBelt("W", BELT_SPEED_W)
-        self.belt2 = PattyBelt("W", BELT_SPEED_W)  # default to W
-        # keep legacy names for UI compatibility
+        self.belt2 = PattyBelt("W", BELT_SPEED_W)
+        self.belt3 = PattyBelt("WJ", BELT_SPEED_WJ)
+        self.belt4 = PattyBelt("WJ", BELT_SPEED_WJ)
+        # keep legacy names for compatibility
         self.w_belt = self.belt1
-        self.wj_belt = self.belt2
+        self.wj_belt = self.belt3
         self.last_error = None
 
-        # timestamps for enforcing minimum delay between dispenses per patty type
-        self.last_dispense_time = {"W": 0.0, "WJ": 0.0}
+        # timestamps for enforcing minimum delay between dispenses per cartridge
+        self.last_dispense_time = {cart_id: 0.0 for cart_id in CARTRIDGE_CONFIGS}
         
         # Initialize cartridges
         for cart_id, config in CARTRIDGE_CONFIGS.items():
@@ -95,6 +105,10 @@ class FreezerAutoloaderSimulator:
             )
             self.cartridges.append(cartridge)
     
+    def _belt_for(self, cart_id: int) -> "PattyBelt":
+        """Return the belt object assigned to a given cartridge id."""
+        return {1: self.belt1, 2: self.belt2, 3: self.belt3, 4: self.belt4}[cart_id]
+
     def request_patties(self, patty_type: str, count: int = 1) -> bool:
         """
         Request patties to be dispensed.
@@ -106,22 +120,35 @@ class FreezerAutoloaderSimulator:
         matching_cartridges = [
             c for c in self.cartridges
             if c.patty_type == patty_type
-            and ((self.belt1 if c.belt_id == 1 else self.belt2).patty_type == patty_type)
+            and self._belt_for(c.id).patty_type == patty_type
         ]
         if not matching_cartridges:
             self.last_error = f"No cartridges available for type {patty_type} on matching belt"
             return False
 
-        for cartridge in matching_cartridges:
-            if cartridge.dispense(count):
-                self.last_error = None
-                self._process_queue(patty_type)
-                return True
+        total_available = sum(cartridge.patties_in_stack for cartridge in matching_cartridges)
+        if total_available < count:
+            self.last_error = (
+                f"{patty_type}hoppers request - no {patty_type} patties currently loaded"
+            )
+            return False
 
-        self.last_error = (
-            f"{patty_type}hoppers request - no {patty_type} patties currently loaded"
-        )
-        return False
+        remaining = count
+        for cartridge in sorted(
+            matching_cartridges,
+            key=lambda cartridge: (-cartridge.patties_in_stack, cartridge.id),
+        ):
+            if remaining <= 0:
+                break
+            dispense_count = min(remaining, cartridge.patties_in_stack)
+            if dispense_count <= 0:
+                continue
+            cartridge.dispense(dispense_count)
+            remaining -= dispense_count
+
+        self.last_error = None
+        self._process_queues()
+        return True
     
     def reload_cartridge(self, cartridge_id: int, patty_type: str = None) -> bool:
         """
@@ -171,35 +198,27 @@ class FreezerAutoloaderSimulator:
         """Change the current patty type (speed) of a belt.
 
         Args:
-            belt_id: 1 or 2
+            belt_id: 1, 2, 3, or 4
             patty_type: "W" or "WJ"
 
         Returns:
             True if the belt was set, False for invalid arguments.
         """
-        if patty_type not in BELT_SPEED_MAP:
+        if patty_type not in BELT_SPEED_MAP or belt_id not in (1, 2, 3, 4):
             return False
-        if belt_id == 1:
-            self.belt1.patty_type = patty_type
-            self.belt1.belt_speed = BELT_SPEED_MAP[patty_type]
-            return True
-        elif belt_id == 2:
-            self.belt2.patty_type = patty_type
-            self.belt2.belt_speed = BELT_SPEED_MAP[patty_type]
-            return True
-        return False
+        belt = self._belt_for(belt_id)
+        belt.patty_type = patty_type
+        belt.belt_speed = BELT_SPEED_MAP[patty_type]
+        return True
 
     def get_belt_info(self) -> dict:
-        """Return current state of both belts."""
+        """Return current state of all four belts."""
         return {
-            1: {
-                "patty_type": self.belt1.patty_type,
-                "patty_count": self.belt1.get_patty_count(),
-            },
-            2: {
-                "patty_type": self.belt2.patty_type,
-                "patty_count": self.belt2.get_patty_count(),
-            },
+            i: {
+                "patty_type": self._belt_for(i).patty_type,
+                "patty_count": self._belt_for(i).get_patty_count(),
+            }
+            for i in (1, 2, 3, 4)
         }
     
     def update(self) -> dict:
@@ -208,29 +227,29 @@ class FreezerAutoloaderSimulator:
         
         This method is called on every timer tick by the UI.  Before returning
         the current state we attempt to process any cartridge queues and move
-        patties onto the belts observing the 5‑second delay requirement.
+        patties onto the belts observing the configured dispense delay requirement.
         
         Returns:
             Dictionary with current state
         """
-        # move queued patties onto belts for both types
-        self._process_queue("W")
-        self._process_queue("WJ")
+        # move queued patties onto each cartridge belt independently
+        self._process_queues()
 
-        w_positions, w_time_remaining = self.belt1.update()
-        wj_positions, wj_time_remaining = self.belt2.update()
-        
+        belts_state = {}
+        for i in (1, 2, 3, 4):
+            belt = self._belt_for(i)
+            positions, time_remaining = belt.update()
+            belts_state[i] = {
+                "positions": positions,
+                "time_remaining": time_remaining,
+                "patty_count": belt.get_patty_count(),
+            }
+
+        # legacy keys kept for any code still using them
         return {
-            "w_belt": {
-                "positions": w_positions,
-                "time_remaining": w_time_remaining,
-                "patty_count": self.belt1.get_patty_count(),
-            },
-            "wj_belt": {
-                "positions": wj_positions,
-                "time_remaining": wj_time_remaining,
-                "patty_count": self.belt2.get_patty_count(),
-            },
+            "w_belt": belts_state[1],
+            "wj_belt": belts_state[3],
+            "belts": belts_state,
             "cartridges": self.get_all_cartridges_info(),
             "last_error": self.last_error,
         }
@@ -244,26 +263,23 @@ class FreezerAutoloaderSimulator:
 
 
 
-    def _process_queue(self, patty_type: str) -> None:
-        """Move patties from cartridge queues onto the belt respecting the 5s delay.
-
-        This helper is invoked from ``update`` (and after each request) so that
-        the belt is loaded as soon as it is allowed.  ``patty_type`` must be
-        either "W" or "WJ".
-        """
+    def _process_queues(self) -> None:
+        """Move queued patties onto belts respecting the configured delay per cartridge."""
         current_time = time.time()
-        last_time = self.last_dispense_time[patty_type]
-
-        if current_time < last_time + 5.0:
-            return
 
         for cart in self.cartridges:
-            if cart.patty_type != patty_type or cart.dispense_queue <= 0:
+            if cart.dispense_queue <= 0:
                 continue
-            belt = self.belt1 if cart.belt_id == 1 else self.belt2
-            if belt.patty_type != patty_type:
+
+            belt = self._belt_for(cart.id)
+            if belt.patty_type != cart.patty_type:
                 continue
+
+            last_time = self.last_dispense_time[cart.id]
+            dispense_delay = DISPENSE_DELAY_MAP[belt.patty_type]
+            if current_time < last_time + dispense_delay:
+                continue
+
             cart.dispense_queue -= 1
             belt.add_patty()
-            self.last_dispense_time[patty_type] = current_time
-            break
+            self.last_dispense_time[cart.id] = current_time

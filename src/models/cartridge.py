@@ -17,8 +17,8 @@ class Cartridge:
         self.patties_in_stack = initial_stack
         self.initial_stack = initial_stack
         self.dispense_queue = 0
-        # assign a physical belt based on cartridge id: 1&2 -> belt 1, 3&4 -> belt 2
-        self.belt_id = 1 if cartridge_id in (1, 2) else 2
+        # each cartridge has its own dedicated belt identified by the same id
+        self.belt_id = cartridge_id
     
     def dispense(self, count: int) -> bool:
         """

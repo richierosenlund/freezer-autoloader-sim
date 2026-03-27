@@ -2,23 +2,25 @@
 
 # Cartridge Configuration
 CARTRIDGE_CONFIGS = {
-    1: {"type": "W", "initial_stack": 30},
-    2: {"type": "WJ", "initial_stack": 30},
-    3: {"type": "W", "initial_stack": 30},
-    4: {"type": "WJ", "initial_stack": 30},
+    1: {"type": "W", "initial_stack": 25},
+    2: {"type": "W", "initial_stack": 25},
+    3: {"type": "WJ", "initial_stack": 15},
+    4: {"type": "WJ", "initial_stack": 15},
 }
 
 # Belt Configuration
-BELT_SPEED_W = 20.0  # seconds for W patty to traverse belt
-BELT_SPEED_WJ = 15.0  # seconds for WJ patty to traverse belt
+BELT_SPEED_W = 120.0  # seconds for W patty to traverse belt
+BELT_SPEED_WJ = 90.0  # seconds for WJ patty to traverse belt
 BELT_WIDTH = 800  # pixels
 BELT_HEIGHT = 80  # pixels
 PATTY_WIDTH = 40  # pixels
-PATTY_HEIGHT = 30  # pixels
+PATTY_HEIGHT = 40  # pixels
 
 # Animation
 ANIMATION_FPS = 60
 UPDATE_INTERVAL_MS = int(1000 / ANIMATION_FPS)
+DISPENSE_DELAY_SECONDS_W = 10.0
+DISPENSE_DELAY_SECONDS_WJ = 8.0
 
 # UI Colors
 COLOR_DARK_TEAL = "#155E75"

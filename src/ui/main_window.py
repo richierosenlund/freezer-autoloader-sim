@@ -2,7 +2,7 @@
 
 from PyQt5.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QLabel,
-    QGroupBox, QScrollArea, QComboBox
+    QGroupBox, QScrollArea
 )
 from PyQt5.QtCore import QTimer, Qt
 from PyQt5.QtGui import QFont
@@ -54,59 +54,55 @@ class MainWindow(QMainWindow):
         right_layout = QVBoxLayout()
         right_layout.setSpacing(15)
         
-        # Whopper belt
+        belt_group_style = """
+            QGroupBox {
+                color: #FFFFFF;
+                border: 2px solid #155E75;
+                border-radius: 5px;
+                margin-top: 10px;
+                padding-top: 10px;
+            }
+            QGroupBox::title {
+                subcontrol-origin: margin;
+                left: 10px;
+                padding: 0 3px 0 3px;
+            }
+        """
+
+        # Whopper belt group — cartridges 1 & 2, both W
         whopper_belt_group = QGroupBox("Whopper Belt")
         whopper_belt_layout = QVBoxLayout()
-        # selector to change belt type
-        self.belt1_selector = QComboBox()
-        self.belt1_selector.addItems(["W", "WJ"])
-        self.belt1_selector.setCurrentText("W")
-        self.belt1_selector.currentTextChanged.connect(lambda t: self.set_belt_type(1, t))
-        whopper_belt_layout.addWidget(self.belt1_selector)
-        self.w_belt_widget = BeltAnimationWidget("W")
-        whopper_belt_layout.addWidget(self.w_belt_widget)
+        whopper_belt_layout.setSpacing(6)
+        cart1_label = QLabel("Cartridge 1")
+        cart1_label.setStyleSheet("color: #FFFFFF; font-size: 10px;")
+        self.belt1_widget = BeltAnimationWidget("W")
+        cart2_label = QLabel("Cartridge 2")
+        cart2_label.setStyleSheet("color: #FFFFFF; font-size: 10px;")
+        self.belt2_widget = BeltAnimationWidget("W")
+        whopper_belt_layout.addWidget(cart1_label)
+        whopper_belt_layout.addWidget(self.belt1_widget)
+        whopper_belt_layout.addWidget(cart2_label)
+        whopper_belt_layout.addWidget(self.belt2_widget)
         whopper_belt_group.setLayout(whopper_belt_layout)
-        whopper_belt_group.setStyleSheet("""
-            QGroupBox {
-                color: #FFFFFF;
-                border: 2px solid #155E75;
-                border-radius: 5px;
-                margin-top: 10px;
-                padding-top: 10px;
-            }
-            QGroupBox::title {
-                subcontrol-origin: margin;
-                left: 10px;
-                padding: 0 3px 0 3px;
-            }
-        """)
+        whopper_belt_group.setStyleSheet(belt_group_style)
         right_layout.addWidget(whopper_belt_group)
-        
-        # Whopper JR belt
+
+        # Whopper JR belt group — cartridges 3 & 4, both WJ
         whopper_jr_belt_group = QGroupBox("Whopper JR Belt")
         whopper_jr_belt_layout = QVBoxLayout()
-        self.belt2_selector = QComboBox()
-        self.belt2_selector.addItems(["W", "WJ"])
-        self.belt2_selector.setCurrentText("W")
-        self.belt2_selector.currentTextChanged.connect(lambda t: self.set_belt_type(2, t))
-        whopper_jr_belt_layout.addWidget(self.belt2_selector)
-        self.wj_belt_widget = BeltAnimationWidget("WJ")
-        whopper_jr_belt_layout.addWidget(self.wj_belt_widget)
+        whopper_jr_belt_layout.setSpacing(6)
+        cart3_label = QLabel("Cartridge 3")
+        cart3_label.setStyleSheet("color: #FFFFFF; font-size: 10px;")
+        self.belt3_widget = BeltAnimationWidget("WJ")
+        cart4_label = QLabel("Cartridge 4")
+        cart4_label.setStyleSheet("color: #FFFFFF; font-size: 10px;")
+        self.belt4_widget = BeltAnimationWidget("WJ")
+        whopper_jr_belt_layout.addWidget(cart3_label)
+        whopper_jr_belt_layout.addWidget(self.belt3_widget)
+        whopper_jr_belt_layout.addWidget(cart4_label)
+        whopper_jr_belt_layout.addWidget(self.belt4_widget)
         whopper_jr_belt_group.setLayout(whopper_jr_belt_layout)
-        whopper_jr_belt_group.setStyleSheet("""
-            QGroupBox {
-                color: #FFFFFF;
-                border: 2px solid #155E75;
-                border-radius: 5px;
-                margin-top: 10px;
-                padding-top: 10px;
-            }
-            QGroupBox::title {
-                subcontrol-origin: margin;
-                left: 10px;
-                padding: 0 3px 0 3px;
-            }
-        """)
+        whopper_jr_belt_group.setStyleSheet(belt_group_style)
         right_layout.addWidget(whopper_jr_belt_group)
         
         # Error box
@@ -155,16 +151,12 @@ class MainWindow(QMainWindow):
     def update_simulation(self):
         """Update simulation state"""
         state = self.simulator.update()
-        
-        # Update belt displays
-        self.w_belt_widget.update_belt_state(
-            state["w_belt"]["positions"],
-            state["w_belt"]["time_remaining"]
-        )
-        self.wj_belt_widget.update_belt_state(
-            state["wj_belt"]["positions"],
-            state["wj_belt"]["time_remaining"]
-        )
+        belts = state["belts"]
+
+        self.belt1_widget.update_belt_state(belts[1]["positions"], belts[1]["time_remaining"])
+        self.belt2_widget.update_belt_state(belts[2]["positions"], belts[2]["time_remaining"])
+        self.belt3_widget.update_belt_state(belts[3]["positions"], belts[3]["time_remaining"])
+        self.belt4_widget.update_belt_state(belts[4]["positions"], belts[4]["time_remaining"])
         
         # Update cartridge info
         for info in state["cartridges"]:
@@ -198,13 +190,6 @@ class MainWindow(QMainWindow):
         """Handle whopper JR patty request"""
         self.simulator.request_patties("WJ", count)
 
-    def set_belt_type(self, belt_id: int, patty_type: str):
-        """Helper called by UI selectors to change belt configuration"""
-        self.simulator.set_belt_type(belt_id, patty_type)
-        # update corresponding widget
-        widget = self.w_belt_widget if belt_id == 1 else self.wj_belt_widget
-        widget.patty_type = patty_type
-    
     def on_reload_cartridge(self, cart_id: int, patty_type: str):
         """Handle cartridge reload with explicit type"""
         self.simulator.reload_cartridge(cart_id, patty_type)
