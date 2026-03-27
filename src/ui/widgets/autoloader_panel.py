@@ -116,43 +116,35 @@ class AutoloaderPanel(QWidget):
         row = cart_id - 1
         
         # Reload buttons
+        reload_btn_style = """
+            QPushButton {
+                background-color: #FFFFFF;
+                color: #000000;
+                border: 1px solid #155E75;
+                border-radius: 3px;
+                padding: 4px;
+                font-weight: bold;
+            }
+            QPushButton:hover {
+                background-color: #E0E0E0;
+            }
+        """
+
         reload_w_btn = QPushButton("W")
         reload_w_btn.setMaximumWidth(40)
-        reload_w_btn.setStyleSheet("""
-            QPushButton {
-                background-color: #FFFFFF;
-                color: #000000;
-                border: 1px solid #155E75;
-                border-radius: 3px;
-                padding: 4px;
-                font-weight: bold;
-            }
-            QPushButton:hover {
-                background-color: #E0E0E0;
-            }
-        """)
+        reload_w_btn.setStyleSheet(reload_btn_style)
         reload_w_btn.clicked.connect(lambda _, cid=cart_id: self.reload_cartridge.emit(cid, "W"))
-        
+
         reload_wj_btn = QPushButton("WJ")
         reload_wj_btn.setMaximumWidth(40)
-        reload_wj_btn.setStyleSheet("""
-            QPushButton {
-                background-color: #FFFFFF;
-                color: #000000;
-                border: 1px solid #155E75;
-                border-radius: 3px;
-                padding: 4px;
-                font-weight: bold;
-            }
-            QPushButton:hover {
-                background-color: #E0E0E0;
-            }
-        """)
+        reload_wj_btn.setStyleSheet(reload_btn_style)
         reload_wj_btn.clicked.connect(lambda _, cid=cart_id: self.reload_cartridge.emit(cid, "WJ"))
         
         reload_layout = QHBoxLayout()
-        reload_layout.addWidget(reload_w_btn)
-        reload_layout.addWidget(reload_wj_btn)
+        if cart_id in (1, 2):
+            reload_layout.addWidget(reload_w_btn)
+        else:
+            reload_layout.addWidget(reload_wj_btn)
         reload_layout.setContentsMargins(0, 0, 0, 0)
         reload_group = QGroupBox(f"Reload Cartridge {cart_id}")
         reload_group.setLayout(reload_layout)

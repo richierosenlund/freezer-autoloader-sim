@@ -367,23 +367,23 @@
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyInstaller\\fake-modules\\_pyi_rth_utils\\__init__.py',
    'PYMODULE'),
-  ('subprocess',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py',
-   'PYMODULE'),
-  ('signal',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\signal.py',
+  ('tracemalloc',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\tracemalloc.py',
    'PYMODULE'),
   ('stringprep',
    'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\stringprep.py',
-   'PYMODULE'),
-  ('tracemalloc',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\tracemalloc.py',
    'PYMODULE'),
   ('_colorize',
    'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_colorize.py',
    'PYMODULE'),
   ('_py_abc',
    'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_py_abc.py',
+   'PYMODULE'),
+  ('subprocess',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\subprocess.py',
+   'PYMODULE'),
+  ('signal',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\signal.py',
    'PYMODULE'),
   ('src.ui.main_window',
    'C:\\Projects\\Freezer '
@@ -444,65 +444,65 @@
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qgif.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qjpeg.dll',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\generic\\qtuiotouchplugin.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\generic\\qtuiotouchplugin.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qjpeg.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\plugins\\imageformats\\qico.dll',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qico.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qjpeg.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qjpeg.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\plugins\\imageformats\\qtga.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtga.dll',
-   'BINARY'),
   ('PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qicns.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtiff.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qoffscreen.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwindows.dll',
    'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\iconengines\\qsvgicon.dll',
+   'BINARY'),
   ('PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qsvg.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\platformthemes\\qxdgdesktopportal.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qwebgl.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\platforms\\qminimal.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qtga.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qtga.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwbmp.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\imageformats\\qwebp.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\plugins\\generic\\qtuiotouchplugin.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\plugins\\generic\\qtuiotouchplugin.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\bin\\libGLESv2.dll',
    'C:\\Projects\\Freezer '
@@ -512,13 +512,13 @@
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\libEGL.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
-   'BINARY'),
   ('PyQt5\\Qt5\\bin\\opengl32sw.dll',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\opengl32sw.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\d3dcompiler_47.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\plugins\\styles\\qwindowsvistastyle.dll',
    'C:\\Projects\\Freezer '
@@ -564,40 +564,40 @@
   ('VCRUNTIME140.dll',
    'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\bin\\Qt5Gui.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Gui.dll',
-   'BINARY'),
   ('PyQt5\\Qt5\\bin\\Qt5Core.dll',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Core.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\bin\\Qt5Network.dll',
+  ('PyQt5\\Qt5\\bin\\Qt5Gui.dll',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Network.dll',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Gui.dll',
    'BINARY'),
-  ('PyQt5\\Qt5\\bin\\Qt5DBus.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5DBus.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\bin\\Qt5Svg.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Svg.dll',
-   'BINARY'),
-  ('PyQt5\\Qt5\\bin\\Qt5WebSockets.dll',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5WebSockets.dll',
+  ('VCRUNTIME140_1.dll',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\bin\\MSVCP140.dll',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\MSVCP140.dll',
    'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5Svg.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Svg.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5DBus.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5DBus.dll',
+   'BINARY'),
+  ('PyQt5\\Qt5\\bin\\Qt5WebSockets.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5WebSockets.dll',
+   'BINARY'),
   ('PyQt5\\Qt5\\bin\\Qt5Quick.dll',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Quick.dll',
    'BINARY'),
-  ('VCRUNTIME140_1.dll',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll',
+  ('PyQt5\\Qt5\\bin\\Qt5Network.dll',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\bin\\Qt5Network.dll',
    'BINARY'),
   ('PyQt5\\Qt5\\bin\\VCRUNTIME140_1.dll',
    'C:\\Projects\\Freezer '
@@ -631,101 +631,33 @@
    'BINARY')],
  [],
  [],
- [('PyQt5\\Qt5\\translations\\qtbase_fi.qm',
+ [('PyQt5\\Qt5\\translations\\qtbase_da.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fi.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_da.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_ko.qm',
+  ('PyQt5\\Qt5\\translations\\qt_help_sk.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ko.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_it.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_it.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_zh_CN.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_zh_CN.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_bg.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_bg.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_uk.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_uk.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_pl.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_pl.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_bg.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_bg.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ru.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ru.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_gl.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_gl.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_it.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_it.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_uk.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_uk.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_zh_TW.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_zh_TW.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_sk.qm',
    'DATA'),
   ('PyQt5\\Qt5\\translations\\qtbase_en.qm',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_en.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_hu.qm',
+  ('PyQt5\\Qt5\\translations\\qtbase_ja.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_hu.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ja.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_tr.qm',
+  ('PyQt5\\Qt5\\translations\\qtbase_uk.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_tr.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_uk.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_bg.qm',
+  ('PyQt5\\Qt5\\translations\\qtbase_ar.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_bg.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ar.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_fr.qm',
+  ('PyQt5\\Qt5\\translations\\qtbase_pl.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_fr.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_ar.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ar.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_sl.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_sl.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_he.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_he.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_en.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_en.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_cs.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_cs.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_pl.qm',
    'DATA'),
   ('PyQt5\\Qt5\\translations\\qt_help_pl.qm',
    'C:\\Projects\\Freezer '
@@ -735,208 +667,297 @@
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_gd.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_ja.qm',
+  ('PyQt5\\Qt5\\translations\\qt_pl.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ja.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_ca.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ca.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_fr.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fr.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_sk.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_sk.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_ja.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ja.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_sl.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_sl.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_sk.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_sk.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ko.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ko.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_de.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_de.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_zh_CN.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_zh_CN.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_tr.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_tr.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_it.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_it.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ar.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ar.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_he.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_he.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_gl.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_gl.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_de.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_de.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_ca.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ca.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_lt.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_lt.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_pt.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_pt.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_pl.qm',
    'DATA'),
   ('PyQt5\\Qt5\\translations\\qt_sk.qm',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_sk.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_ru.qm',
+  ('PyQt5\\Qt5\\translations\\qtbase_hu.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ru.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_hu.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_es.qm',
+  ('PyQt5\\Qt5\\translations\\qt_lt.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_es.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_lt.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_fi.qm',
+  ('PyQt5\\Qt5\\translations\\qtbase_tr.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_fi.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_tr.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_zh_TW.qm',
+  ('PyQt5\\Qt5\\translations\\qt_gl.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_zh_TW.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_gl.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_fa.qm',
+  ('PyQt5\\Qt5\\translations\\qt_help_ca.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_fa.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ca.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_da.qm',
+  ('PyQt5\\Qt5\\translations\\qt_help_zh_TW.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_da.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_fr.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_fr.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_hu.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_hu.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_zh_TW.qm',
    'DATA'),
   ('PyQt5\\Qt5\\translations\\qtbase_lv.qm',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_lv.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_gd.qm',
+  ('PyQt5\\Qt5\\translations\\qt_sl.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_gd.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_sl.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_da.qm',
+  ('PyQt5\\Qt5\\translations\\qt_zh_CN.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_da.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_zh_CN.qm',
    'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ca.qm',
+  ('PyQt5\\Qt5\\translations\\qt_hu.qm',
    'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ca.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_es.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_es.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_de.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_de.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_es.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_es.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_hu.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_hu.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_en.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_en.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_ja.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ja.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_tr.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_tr.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_sv.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_sv.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_lv.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_lv.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_ar.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ar.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_cs.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_cs.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_pl.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_pl.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_cs.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_cs.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qtbase_uk.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_uk.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_da.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_da.qm',
-   'DATA'),
-  ('PyQt5\\Qt5\\translations\\qt_help_ru.qm',
-   'C:\\Projects\\Freezer '
-   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ru.qm',
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_hu.qm',
    'DATA'),
   ('PyQt5\\Qt5\\translations\\qt_ko.qm',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ko.qm',
    'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_he.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_he.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_fr.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_sl.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_sl.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ca.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ca.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_sk.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_sk.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_fr.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_fr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_lv.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_lv.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_bg.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_bg.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_es.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_es.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_gl.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_gl.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_en.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_en.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_uk.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_uk.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ko.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ko.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_uk.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_uk.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_cs.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_cs.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_ru.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ru.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_hu.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_hu.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_ru.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ru.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_fr.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_fr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_ca.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ca.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_tr.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_tr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_zh_TW.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_zh_TW.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_de.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_de.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_es.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_es.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_he.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_he.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_de.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_de.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_zh_TW.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_tr.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_tr.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_pt.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_pt.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_ar.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ar.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_it.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_it.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_ar.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ar.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_fa.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_fa.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_ja.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_ja.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_fi.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_fi.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_gd.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_gd.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_da.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_da.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_it.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_it.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_ja.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ja.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_sv.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_sv.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_ru.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_ru.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_da.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_da.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_cs.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_cs.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_de.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_de.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_en.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_en.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_ko.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_ko.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_bg.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_bg.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_zh_CN.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_zh_CN.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_fi.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_fi.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qtbase_it.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qtbase_it.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_es.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_es.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_cs.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_cs.qm',
+   'DATA'),
+  ('PyQt5\\Qt5\\translations\\qt_help_bg.qm',
+   'C:\\Projects\\Freezer '
+   'auto-loader\\freezer-autoloader-simulator\\venv\\Lib\\site-packages\\PyQt5\\Qt5\\translations\\qt_help_bg.qm',
+   'DATA'),
   ('base_library.zip',
    'C:\\Projects\\Freezer '
    'auto-loader\\freezer-autoloader-simulator\\build\\FreezerAutoloaderSimulator\\base_library.zip',
    'DATA')],
- [('os',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\os.py',
+ [('posixpath',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\posixpath.py',
+   'PYMODULE'),
+  ('io',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\io.py',
+   'PYMODULE'),
+  ('copyreg',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\copyreg.py',
+   'PYMODULE'),
+  ('_weakrefset',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_weakrefset.py',
+   'PYMODULE'),
+  ('types',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\types.py',
+   'PYMODULE'),
+  ('warnings',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\warnings.py',
+   'PYMODULE'),
+  ('locale',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\locale.py',
+   'PYMODULE'),
+  ('stat',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\stat.py',
    'PYMODULE'),
   ('encodings.zlib_codec',
    'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\encodings\\zlib_codec.py',
@@ -1304,59 +1325,20 @@
   ('encodings',
    'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\encodings\\__init__.py',
    'PYMODULE'),
-  ('locale',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\locale.py',
-   'PYMODULE'),
-  ('operator',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\operator.py',
-   'PYMODULE'),
-  ('codecs',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\codecs.py',
-   'PYMODULE'),
-  ('functools',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\functools.py',
-   'PYMODULE'),
-  ('ntpath',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\ntpath.py',
-   'PYMODULE'),
-  ('keyword',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\keyword.py',
-   'PYMODULE'),
-  ('sre_constants',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\sre_constants.py',
-   'PYMODULE'),
-  ('sre_compile',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\sre_compile.py',
-   'PYMODULE'),
-  ('sre_parse',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\sre_parse.py',
-   'PYMODULE'),
-  ('stat',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\stat.py',
-   'PYMODULE'),
-  ('posixpath',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\posixpath.py',
-   'PYMODULE'),
-  ('warnings',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\warnings.py',
-   'PYMODULE'),
   ('traceback',
    'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\traceback.py',
    'PYMODULE'),
-  ('io',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\io.py',
-   'PYMODULE'),
-  ('enum',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\enum.py',
-   'PYMODULE'),
-  ('heapq',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\heapq.py',
+  ('linecache',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\linecache.py',
    'PYMODULE'),
   ('genericpath',
    'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\genericpath.py',
    'PYMODULE'),
-  ('copyreg',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\copyreg.py',
+  ('collections',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\collections\\__init__.py',
+   'PYMODULE'),
+  ('enum',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\enum.py',
    'PYMODULE'),
   ('re._parser',
    'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\_parser.py',
@@ -1373,27 +1355,45 @@
   ('re',
    'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\__init__.py',
    'PYMODULE'),
-  ('weakref',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\weakref.py',
+  ('_collections_abc',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_collections_abc.py',
    'PYMODULE'),
-  ('reprlib',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\reprlib.py',
-   'PYMODULE'),
-  ('types',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\types.py',
+  ('sre_parse',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\sre_parse.py',
    'PYMODULE'),
   ('abc',
    'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\abc.py',
    'PYMODULE'),
-  ('linecache',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\linecache.py',
+  ('operator',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\operator.py',
    'PYMODULE'),
-  ('_collections_abc',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_collections_abc.py',
+  ('codecs',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\codecs.py',
    'PYMODULE'),
-  ('collections',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\collections\\__init__.py',
+  ('sre_constants',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\sre_constants.py',
    'PYMODULE'),
-  ('_weakrefset',
-   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_weakrefset.py',
+  ('sre_compile',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\sre_compile.py',
+   'PYMODULE'),
+  ('functools',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\functools.py',
+   'PYMODULE'),
+  ('reprlib',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\reprlib.py',
+   'PYMODULE'),
+  ('keyword',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\keyword.py',
+   'PYMODULE'),
+  ('heapq',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\heapq.py',
+   'PYMODULE'),
+  ('os',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\os.py',
+   'PYMODULE'),
+  ('weakref',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\weakref.py',
+   'PYMODULE'),
+  ('ntpath',
+   'C:\\Users\\rrosenlund\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\ntpath.py',
    'PYMODULE')])
