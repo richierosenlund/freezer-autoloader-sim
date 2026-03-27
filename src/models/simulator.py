@@ -39,6 +39,14 @@ class PattyBelt:
         """Add a patty to the belt"""
         self.patties_on_belt.append((time.time(), self.patty_type))
     
+    def add_patty_with_type(self, patty_type: str):
+        """Add a patty to the belt with a specific type label.
+        
+        Args:
+            patty_type: Custom type label for the patty (e.g., "LTO")
+        """
+        self.patties_on_belt.append((time.time(), patty_type))
+    
     def update(self) -> Tuple[List[Tuple[float, float]], float]:
         """
         Update belt animation state.
@@ -76,6 +84,19 @@ class PattyBelt:
         """Get number of patties currently on belt"""
         return len(self.patties_on_belt)
 
+    def has_active_type(self, patty_type: str) -> bool:
+        """Return True when a patty type is still moving toward the end of the belt."""
+        current_time = time.time()
+        for patty_time, current_type in self.patties_on_belt:
+            if current_type != patty_type:
+                continue
+            elapsed = current_time - patty_time
+            position = (elapsed / self.belt_speed) * 100
+            # "Reached the end" is treated as position >= 100.
+            if position < 100:
+                return True
+        return False
+
 
 class FreezerAutoloaderSimulator:
     """Main simulation engine"""
@@ -95,6 +116,13 @@ class FreezerAutoloaderSimulator:
 
         # timestamps for enforcing minimum delay between dispenses per cartridge
         self.last_dispense_time = {cart_id: 0.0 for cart_id in CARTRIDGE_CONFIGS}
+        
+        # LTO (Load To Order) state for cartridge 4
+        self.lto_mode = False
+        self.lto_load_qty = 0
+        self.lto_loads_remaining = 0
+        self.lto_waiting_for_wj_clear = False
+        self.lto_timer_start = None
         
         # Initialize cartridges
         for cart_id, config in CARTRIDGE_CONFIGS.items():
@@ -232,6 +260,9 @@ class FreezerAutoloaderSimulator:
         Returns:
             Dictionary with current state
         """
+        # Update LTO state (check timer expiry, belt clearance, etc)
+        self.update_lto_state()
+        
         # move queued patties onto each cartridge belt independently
         self._process_queues()
 
@@ -270,6 +301,10 @@ class FreezerAutoloaderSimulator:
         for cart in self.cartridges:
             if cart.dispense_queue <= 0:
                 continue
+            
+            # Skip cart 4 if LTO mode is active
+            if self.lto_mode and cart.id == 4:
+                continue
 
             belt = self._belt_for(cart.id)
             if belt.patty_type != cart.patty_type:
@@ -283,3 +318,101 @@ class FreezerAutoloaderSimulator:
             cart.dispense_queue -= 1
             belt.add_patty()
             self.last_dispense_time[cart.id] = current_time
+    
+    def initiate_lto(self, load_qty: int) -> bool:
+        """Initiate LTO (Load To Order) mode for cartridge 4.
+        
+        Args:
+            load_qty: Number of LTO items to load
+            
+        Returns:
+            True if LTO mode initiated successfully
+        """
+        if self.lto_mode:
+            return False  # Already in LTO mode
+        
+        self.lto_mode = True
+        self.lto_load_qty = load_qty
+        self.lto_loads_remaining = load_qty
+        # First load is blocked only until any pre-existing WJ patties reach belt end.
+        self.lto_waiting_for_wj_clear = self.belt4.has_active_type("WJ")
+        self.lto_timer_start = None
+        return True
+    
+    def load_lto_item(self) -> bool:
+        """Load a single LTO item onto belt 4.
+        
+        Returns:
+            True if item loaded successfully, False if no loads remaining
+        """
+        if not self.lto_mode or self.lto_loads_remaining <= 0 or self.lto_waiting_for_wj_clear:
+            return False
+        
+        # Add LTO patty to belt 4 with "LTO" type label
+        self.belt4.add_patty_with_type("LTO")
+        self.lto_loads_remaining -= 1
+        return True
+    
+    def finish_lto(self) -> bool:
+        """Finish LTO mode and start the finish timer.
+        
+        Returns:
+            True if timer started successfully
+        """
+        if not self.lto_mode or self.lto_loads_remaining > 0:
+            return False  # Can only finish when all loads are done
+        
+        self.lto_timer_start = time.time()
+        return True
+    
+    def update_lto_state(self) -> None:
+        """Update LTO state including checking belt clearance and timer expiry."""
+        if not self.lto_mode:
+            return
+        
+        current_time = time.time()
+        
+        # If timer is running, check if it has expired
+        if self.lto_timer_start is not None:
+            elapsed = current_time - self.lto_timer_start
+            if elapsed >= BELT_SPEED_WJ:
+                # Timer expired, reset LTO mode
+                self.lto_mode = False
+                self.lto_waiting_for_wj_clear = False
+                self.lto_timer_start = None
+
+        # During Initiate phase, wait only for pre-existing WJ patties on belt 4 to clear.
+        if self.lto_waiting_for_wj_clear and not self.belt4.has_active_type("WJ"):
+            self.lto_waiting_for_wj_clear = False
+    
+    def get_lto_status(self) -> dict:
+        """Get current LTO status for UI updates.
+        
+        Returns:
+            Dictionary with LTO state information
+        """
+        belt4_clear = self.belt4.get_patty_count() == 0
+        # Allow rapid LTO loads after Initiate gate opens; no per-load belt clear wait.
+        load_btn_enabled = (
+            self.lto_mode
+            and not self.lto_waiting_for_wj_clear
+            and self.lto_loads_remaining > 0
+            and self.lto_timer_start is None
+        )
+        finish_btn_enabled = self.lto_mode and self.lto_loads_remaining == 0 and self.lto_timer_start is None
+        
+        timer_remaining = 0.0
+        if self.lto_timer_start is not None:
+            current_time = time.time()
+            elapsed = current_time - self.lto_timer_start
+            timer_remaining = max(0.0, BELT_SPEED_WJ - elapsed)
+        
+        return {
+            "lto_mode": self.lto_mode,
+            "belt4_clear": belt4_clear,
+            "waiting_for_wj_clear": self.lto_waiting_for_wj_clear,
+            "load_btn_enabled": load_btn_enabled,
+            "finish_btn_enabled": finish_btn_enabled,
+            "loads_remaining": self.lto_loads_remaining,
+            "timer_remaining": timer_remaining,
+        }

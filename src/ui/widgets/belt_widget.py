@@ -95,7 +95,12 @@ class BeltAnimationWidget(QWidget):
         patty_y = belt_y + (BELT_HEIGHT - PATTY_HEIGHT) // 2
 
         # Draw patty as a filled ellipse (round patty)
-        patty_color = QColor("#8B4513") if patty_type == "W" else QColor("#A0522D")
+        # Use distinct orange color for LTO patties, brown for regular patties
+        if patty_type == "LTO":
+            patty_color = QColor("#EF8F00")  # Distinct orange for LTO
+        else:
+            patty_color = QColor("#8B4513") if patty_type == "W" else QColor("#A0522D")
+        
         painter.setBrush(patty_color)
         painter.setPen(QPen(QColor("#FFFFFF"), 1))
         painter.drawEllipse(int(patty_x), int(patty_y), PATTY_WIDTH, PATTY_HEIGHT)

@@ -42,6 +42,9 @@ class MainWindow(QMainWindow):
         self.broiler_panel = BroilerPanel()
         self.broiler_panel.request_whopper.connect(self.on_request_whopper)
         self.broiler_panel.request_whopper_jr.connect(self.on_request_whopper_jr)
+        self.broiler_panel.lto_initiate.connect(self.on_lto_initiate)
+        self.broiler_panel.lto_load.connect(self.on_lto_load)
+        self.broiler_panel.lto_finish.connect(self.on_lto_finish)
         left_layout.addWidget(self.broiler_panel)
         
         # Autoloader Panel
@@ -166,6 +169,14 @@ class MainWindow(QMainWindow):
         queues = self.simulator.get_dispense_queues()
         self.autoloader_panel.update_queues(queues["W"], queues["WJ"])
         
+        # Update LTO button states
+        lto_status = self.simulator.get_lto_status()
+        self.broiler_panel.lto_initiate_btn.setEnabled(not lto_status["lto_mode"])
+        self.broiler_panel.lto_load_btn.setEnabled(lto_status["load_btn_enabled"])
+        self.broiler_panel.lto_finish_btn.setEnabled(lto_status["finish_btn_enabled"])
+        self.broiler_panel.set_lto_remaining(lto_status["loads_remaining"])
+        self.broiler_panel.set_lto_finish_timer(lto_status["timer_remaining"])
+        
         # Update error display
         if state["last_error"]:
             self.error_label.setText(f"- {state['last_error']}")
@@ -197,3 +208,25 @@ class MainWindow(QMainWindow):
     def on_reset_stack(self, cart_id: int):
         """Handle stack counter reset"""
         self.simulator.reset_stack_counter(cart_id)
+    
+    def on_lto_initiate(self):
+        """Handle LTO initiate button - pause cart 4 dispense"""
+        load_qty = self.broiler_panel.lto_qty_spin.value()
+        self.simulator.initiate_lto(load_qty)
+        lto_status = self.simulator.get_lto_status()
+        self.broiler_panel.set_lto_remaining(lto_status["loads_remaining"])
+        self.broiler_panel.set_lto_finish_timer(lto_status["timer_remaining"])
+    
+    def on_lto_load(self):
+        """Handle LTO load button - add one LTO patty to belt"""
+        self.simulator.load_lto_item()
+        lto_status = self.simulator.get_lto_status()
+        self.broiler_panel.set_lto_remaining(lto_status["loads_remaining"])
+        self.broiler_panel.set_lto_finish_timer(lto_status["timer_remaining"])
+    
+    def on_lto_finish(self):
+        """Handle LTO finish button - start timer for belt completion"""
+        self.simulator.finish_lto()
+        lto_status = self.simulator.get_lto_status()
+        self.broiler_panel.set_lto_remaining(lto_status["loads_remaining"])
+        self.broiler_panel.set_lto_finish_timer(lto_status["timer_remaining"])
